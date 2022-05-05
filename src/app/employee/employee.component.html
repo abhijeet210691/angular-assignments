@@ -1,0 +1,25 @@
+<div class="container mt-5">
+  <table class="table table-striped table-hover border-primary">
+      <thead class="table-dark">
+          <tr>
+              <th>No</th>
+              <th>Name</th>
+              <th>Address</th>
+              <th>Phone</th>
+              <th>Email</th>
+              <th>Salary</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let e of EmpArray">
+              <td>{{e.empId}}</td>
+              <td>{{e.empName}}</td>
+              <td>{{e.empAddress}}</td>
+              <td>{{e.empPhone}}</td>
+              <td>{{e.empEmail}}</td>
+              <td>{{e.empSalary}}</td>
+              <td><a routerLink="/details/{{e.empId}}">{{e.empId}} Id</a></td>
+          </tr>
+      </tbody>
+  </table>
+</div>

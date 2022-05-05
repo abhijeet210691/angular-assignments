@@ -1,0 +1,48 @@
+<!-- 
+    Display Train Array : trainId, trainType, trainRoute, constructDate, trainTicket
+    trainType : UpperCase
+    trainRoute: lowecase
+    trainTicker : INR currency
+    constructDate : FULL Date
+ -->
+
+ <div class="container my-5 ">
+    <h2>Assignment</h2>
+    <table class="table table-bordered">
+        <tr>
+            <th>ID</th>
+            <th>Type</th>
+            <th>Route</th>
+            <th>Ticket</th>
+            <th>Date</th>
+        </tr>
+        <tr *ngFor="let item of trainArray">
+            <td>{{item.trainId | number : '0.2'}}</td>
+            <td>{{item.trainType | uppercase}}</td>
+            <td>{{item.trainRoute | lowercase}}</td>
+            <td>{{item.trainTicket | currency : 'INR'}}</td>
+            <td>{{item.myDate | date : 'fullDate'}}</td>
+        </tr>
+    </table>
+
+   <h2>Assignment</h2>
+    <table class="table">
+        <tr>
+            <th (click)="sortBy('trainId')">
+                ID
+            </th>
+            <th>Type</th>
+            <th>Route</th>
+            <th>Fare</th>
+        </tr>
+        <tr *ngFor="let item of trainDetails | orderBy : colName : sortId">
+            <td>{{item.trainId}}</td>
+            <td>{{item.trainType}}</td>
+            <td>{{item.trainRoute}}</td>
+            <td>{{item.trainFare}}</td>
+        </tr>
+    </table>
+
+
+
+</div>

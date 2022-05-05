@@ -1,0 +1,18 @@
+<div class="container mt-5">
+    <form [formGroup]="jsonForm" (submit)="productForm()">
+        <div class="row">
+            <div class="col-lg-6 mt-5">
+                <input type="text" class="form-control" placeholder="Product Name" formControlName="pName">
+            </div>
+            <div class="col-lg-6 mt-5">
+                <input type="text" class="form-control" placeholder="Description" formControlName="description">
+            </div>
+            <div class="col-lg-6 mt-5">
+                <input type="text" class="form-control" placeholder="Product price" formControlName="price">
+            </div>
+            <div class="col-lg-12 mt-5">
+                <button type="submit" class="btn btn-info" [disabled]="jsonForm.invalid">Add Student</button>
+            </div>
+        </div>
+    </form>
+</div>

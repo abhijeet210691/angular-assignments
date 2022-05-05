@@ -1,0 +1,88 @@
+<div class="container mt-5">
+    <table class="table" style="width: 300px;">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Book Name</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of book">
+                <td>{{item.id}}</td>
+                <td>{{item.bookName}}</td>
+                <td>{{item.price}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    
+</div>
+
+
+<!-- 
+
+    Do following using ngFor and ngIf
+Consider array  salaries=[put some salary numbers here]
+Q.1. Display only salaries from odd index
+Q.2. Display only salaries from even index
+Q.3. Display only first salary
+Q.4. Display only last salary
+ -->
+
+ <div class="container mt-5">
+    <h2>Assignment 3</h2>
+     <table class="table" style="max-width: 500px;">
+         <tr>
+             <th>Index</th>
+             <th>Salaries</th>
+             <th>Odd Index</th>
+    
+         </tr>
+         <tr *ngFor="let oddSal of salaries; let i = index; let o = odd; let e = even; let f = first; let l = last">
+             <td>{{i}}</td>
+             <td>{{oddSal}}</td>
+             <td *ngIf="o">{{oddSal}}</td>
+             
+         </tr>
+     </table>
+     <table class="table" style="max-width: 500px;">
+        <tr>
+            <th>Index</th>
+            <th>Salaries</th>
+            <th>Even Index</th>
+        </tr>
+        <tr *ngFor="let oddSal of salaries; let i = index; let o = odd; let e = even; let f = first; let l = last">
+            <td>{{i}}</td>
+            <td>{{oddSal}}</td>
+            <td *ngIf="e">{{oddSal}}</td>
+        </tr>
+    </table>
+    
+    <table class="table" style="max-width: 500px;">
+        <tr>
+            <th>Index</th>
+            <th>Salaries</th>
+            <th>First</th>
+        </tr>
+        <tr *ngFor="let oddSal of salaries; let i = index; let o = odd; let e = even; let f = first; let l = last">
+            <td>{{i}}</td>
+            <td>{{oddSal}}</td>
+            <td *ngIf="f">{{oddSal}}</td>
+        </tr>
+    </table>
+    
+    <table class="table" style="max-width: 500px;">
+        <tr>
+            <th>Index</th>
+            <th>Salaries</th>
+            <th>Last</th>
+    
+        </tr>
+        <tr *ngFor="let oddSal of salaries; let i = index; let o = odd; let e = even; let f = first; let l = last">
+            <td>{{i}}</td>
+            <td>{{oddSal}}</td>
+            <td *ngIf="l">{{oddSal}}</td>
+        </tr>
+    </table>
+

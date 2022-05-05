@@ -1,0 +1,16 @@
+{
+  "products": [
+    {
+      "pName": "Laptop + mouse",
+      "description": "Dell",
+      "price": "500000",
+      "id": 2
+    },
+    {
+      "pName": "Mobile + Mobile Cover",
+      "description": "Nord One plus",
+      "price": "30000",
+      "id": 3
+    }
+  ]
+}

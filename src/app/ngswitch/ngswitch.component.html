@@ -1,0 +1,49 @@
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-lg-4">
+           <div class="mb-3">
+               <label for="maths" class="form-label">Maths</label>
+               <input type="text" class="form-control" id="maths" [(ngModel)]="maths">
+             </div>
+        </div>
+        <div class="col-lg-4">
+           <div class="mb-3">
+               <label for="physics" class="form-label">Physics</label>
+               <input type="text" class="form-control" id="physics" [(ngModel)]="physics">
+             </div>
+        </div>
+        <div class="col-lg-4">
+           <div class="mb-3">
+               <label for="chemistry" class="form-label">Chemistry</label>
+               <input type="text" class="form-control" id="chemistry" [(ngModel)]="chemistry">
+             </div>
+        </div>
+    </div>
+
+    <button (click)="calulate()">Calculate</button>
+
+
+    <table class="table">
+        <tr>
+            <th>Maths</th>
+            <th>Physics</th>
+            <th>Chemistry</th>
+            <th>Parcentage</th>
+            <th>DISTINCTION</th>
+        </tr>
+        <tr>
+            <td>{{maths}}</td>
+            <td>{{physics}}</td>
+            <td>{{chemistry}}</td>
+            <td >{{percenatageCal}}</td>
+            <td [ngSwitch]="true">
+                <span *ngSwitchCase="percenatageCal >= 70">Distinction</span>
+                <span *ngSwitchCase="percenatageCal >= 60 && percenatageCal <= 69">First class</span>
+                <span *ngSwitchCase="percenatageCal >= 40 && percenatageCal <= 59">Second class</span>
+                <span *ngSwitchCase="percenatageCal <= 40">Fail</span>
+                <span *ngSwitchDefault>Default</span>
+            </td>
+        </tr>
+
+    </table>
+</div>
